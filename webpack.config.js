@@ -5,6 +5,8 @@ module.exports = {
   mode: "development",
   entry: {
     index: "./src/index.js",
+    mkContainer: './src/mkContainer.js',
+    mkProject: './src/mkProject.js',
   },
   output: {
     filename: "[name].bundle.js",
