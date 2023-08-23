@@ -7,6 +7,7 @@ module.exports = {
     index: "./src/index.js",
     mkContainer: './src/mkContainer.js',
     mkProject: './src/mkProject.js',
+    mkTodo: './src/mkTodo.js',
   },
   output: {
     filename: "[name].bundle.js",
