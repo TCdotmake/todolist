@@ -1,5 +1,4 @@
-
-import mkProject from "./mkProject";  
-
-const proj = mkProject('title');
-console.log(proj);
+import css from './style.css';
+import calendar from "./calendar";
+import todoForm from "./todoModal";
+document.body.appendChild(todoForm);

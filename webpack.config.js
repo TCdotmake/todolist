@@ -8,6 +8,8 @@ module.exports = {
     mkContainer: './src/mkContainer.js',
     mkProject: './src/mkProject.js',
     mkTodo: './src/mkTodo.js',
+    calendar: './src/calendar.js',
+    todoModal: './src/todoModal.js',
   },
   output: {
     filename: "[name].bundle.js",
