@@ -1,28 +1,14 @@
 import css from "./style.css";
-import todoForm from "./todoForm";
 import mkModalObj from "./mkModal";
-import { trigger1, trigger2, modal_bg, modal1} from "./modal";
+import modal_bg from "./modalBGandCSS";
+import todoForm from './todoForm';
 
-
-document.body.appendChild(trigger1);
-document.body.appendChild(trigger2);
 document.body.appendChild(modal_bg);
-document.body.appendChild(modal1);
-
 let todoModalObj = mkModalObj('todoModal', 'Add Todo', todoForm);
 document.body.appendChild(todoModalObj.trigger);
-document.body.appendChild(todoModalObj.modal);
+
 
 // eventListeners
-
-let triggers = document.querySelectorAll('.modal-trigger');
-for(let n of triggers){
-    n.addEventListener('click', ()=>{
-        console.log(n.dataset.modal);
-        document.querySelector('.modal-bg').classList.add('modal-open');
-        document.querySelector(`#${n.dataset.modal}`).classList.add('modal-open');
-    })
-}
 
 let shutModal = document.querySelectorAll('.modal-close');
 for(let n of shutModal){
@@ -30,6 +16,11 @@ for(let n of shutModal){
         let opened = document.querySelectorAll('.modal-open');
         for(let item of opened){
             item.classList.remove('modal-open');
+        }
+        //clean up
+        let content = document.querySelectorAll('.modal-content');
+        for(let child of content){
+            child.parentNode.removeChild(child);
         }
     })
 }
