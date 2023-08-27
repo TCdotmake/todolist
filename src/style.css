@@ -30,12 +30,47 @@ ul {
   list-style: none;
 }
 
+body{
+  width: 100%;;
+  min-height: 100vh;
+}
+
+.todo-form{
+  width: 280px;
+  background: rgb(164, 143, 206);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 0 3rem 0;
+  border-radius: 20px;
+}
+
 .todo-input{
   display: flex;
   flex-direction: column;
+  width: 80%;
 }
 
 .todo-row{
   display: flex;
   flex-direction: row;
+  width: 80%;
+  justify-content: space-evenly;
+  gap: 1rem;
 }
+
+.todo-row.btn{
+  justify-content: flex-end;
+}
+
+.todo-exit-div{
+  width: 100%;
+  padding: .5rem;
+}
+
+.todo-exit-btn{
+  background-color: rgb(202, 57, 57);
+  color: white;
+  border-radius: 50%;
+}
+

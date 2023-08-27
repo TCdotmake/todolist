@@ -1,12 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body>
-    <form>
+const todoForm = document.createElement('form');
+todoForm.classList.add('todo-form');
+
+todoForm.innerHTML = `
+<div class="todo-exit-div">
+        <button class="todo-exit-btn modal-close">X</button>
+      </div>
       <div class="todo-input">
         <label for="Title">Title</label>
         <input type="text" name="Title" id="todo-title" />
@@ -31,13 +29,13 @@
           name="Description"
           id="todo-desc"
           cols="30"
-          rows="10"
+          rows="4"
         ></textarea>
       </div>
       <div class="todo-row">
-        <button id="todo-cancel">Cancel</button>
-        <input type="submit" value="Add" id="todo-add">
+        <button id="todo-reset">Reset</button>
+        <input type="submit" value="Add" id="todo-add" />
       </div>
-    </form>
-  </body>
-</html>
+`;
+
+export default todoForm;
