@@ -1,11 +1,19 @@
 import css from "./style.css";
 import todoForm from "./todoForm";
+import mkModalObj from "./mkModal";
 import { trigger1, trigger2, modal_bg, modal1} from "./modal";
+
 
 document.body.appendChild(trigger1);
 document.body.appendChild(trigger2);
 document.body.appendChild(modal_bg);
 document.body.appendChild(modal1);
+
+let todoModalObj = mkModalObj('todoModal', 'Add Todo', todoForm);
+document.body.appendChild(todoModalObj.trigger);
+document.body.appendChild(todoModalObj.modal);
+
+// eventListeners
 
 let triggers = document.querySelectorAll('.modal-trigger');
 for(let n of triggers){
