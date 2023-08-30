@@ -2,9 +2,9 @@ import footerCSS from './footer.css';
 
 import iconCSS from '../icons/icons.css';
 import mkIcon from '../icons/mkIcon';
-import Pin from '../icons/icons8-pin-64.png';
-import Edit from '../icons/icons8-edit-64.png';
-import Trash from '../icons/icons8-trash-64.png';
+import Pin from '../icons/pin.png';
+import Edit from '../icons/edit.png';
+import Trash from '../icons/trash.png';
 const footer = document.createElement('section');
 footer.setAttribute('id','footer');
 
