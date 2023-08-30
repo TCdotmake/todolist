@@ -1,0 +1,7 @@
+:root{
+    --white: white;
+    --light: rgb(191, 191, 191);
+    --medium: gray;
+    --darker: rgb(64, 64, 64);
+    --darkest: black;
+}
