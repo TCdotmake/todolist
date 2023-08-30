@@ -2,10 +2,11 @@ import css from "./style.css";
 import mkModalObj from "./mkModal";
 import modal_bg from "./modalBGandCSS";
 import todoForm from './todoForm';
-
+import opensansCSS from './fonts/opensans/opensans.css';
 document.body.appendChild(modal_bg);
 let todoModalObj = mkModalObj('todoModal', 'Add Todo', todoForm);
 document.body.appendChild(todoModalObj.trigger);
+
 
 
 // eventListeners
