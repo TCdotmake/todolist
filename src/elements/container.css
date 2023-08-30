@@ -11,6 +11,39 @@
     flex: none;
 }
 
-#content{
+#mid{
+    display: flex;
+    flex-direction: column;
+}
+
+#content,
+#mid{
     flex: 1 1 auto
+}
+
+/*responsive design*/
+
+@media (orientation: landscape){
+    #nav ul{
+        margin: 0;
+    }
+}
+
+@media (orientation: landscape){
+    #mid{
+        flex-direction: row;
+    }
+    #nav{
+        width: 30vw;
+        height: 100%;
+        >ul{
+            flex-direction: column;
+            margin-right: 1.5rem;
+            gap: 1rem;
+        }
+    }
+    #footer ul{
+        width: auto;
+        margin-left: calc(30vw + 3rem);
+    }
 }
