@@ -13,7 +13,7 @@ const navBtnArr = [
 ];
 
 const mkNavBtn = (label)=>{
-    const btn = document.createElement('button');
+    const btn = document.createElement('li');
     btn.classList.add('nav-btn');
     btn.setAttribute('id', label);
     btn.innerHTML = label;

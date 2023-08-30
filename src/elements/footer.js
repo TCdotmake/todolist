@@ -12,8 +12,16 @@ const pinIcon = mkIcon(Pin);
 const editIcon = mkIcon(Edit);
 const trashIcon = mkIcon(Trash);
 
-footer.appendChild(pinIcon);
-footer.appendChild(editIcon);
-footer.appendChild(trashIcon);
+const icons = [mkIcon(Pin),mkIcon(Edit),mkIcon(Trash)];
+
+const actionBar = document.createElement('ul');
+
+for(let icon of icons){
+    const item = document.createElement('li');
+    item.appendChild(icon);
+    actionBar.appendChild(item);
+}
+
+footer.appendChild(actionBar);
 
 export default footer;

@@ -6,9 +6,14 @@ import opensansCSS from './fonts/opensans/opensans.css';
 import header from './elements/header';
 import footer from './elements/footer';
 import nav from './elements/navBar';
-document.body.appendChild(header);
-document.body.appendChild(nav);
-document.body.appendChild(footer);
+
+import container from './elements/container';
+// document.body.appendChild(header);
+// document.body.appendChild(nav);
+// document.body.appendChild(footer);
+
+document.body.appendChild(container);
+
 // eventListeners
 
 let shutModal = document.querySelectorAll('.modal-close');
