@@ -22,11 +22,8 @@ const mkModalTrigger = (id, triggerName, modal) => {
 
 const mkModalObj = (id, triggerName, content)=>{
     const modal = mkModalContent(id, content);
-    const obj = {
-        modal,
-        trigger: mkModalTrigger(id, triggerName, modal)
-    }
-    return obj;
+    const trigger = mkModalTrigger(id, triggerName, modal);
+    return trigger;
 };
 
 export default mkModalObj;

@@ -12,10 +12,7 @@ mid.setAttribute('id', 'mid');
 mid.appendChild(nav);
 mid.appendChild(content);
 
-
 container.appendChild(header);
-// container.appendChild(nav);
-// container.appendChild(content);
 container.appendChild(mid);
 container.appendChild(footer);
 container.appendChild(addBtn);
