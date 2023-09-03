@@ -1,0 +1,19 @@
+.modal-form{
+    align-self: center;
+    > div{
+        border: 1px solid var(--darkest);
+        border-radius: .5rem;
+        display: flex;
+        flex-direction: column;
+        padding: 1rem;
+        position: relative;
+        > label{
+            font-size: .75rem;
+            position: absolute;
+            top: -1.3ch;
+            background-color: white;
+            padding: 0 .3rem;
+            font-weight: 300;
+        }
+    }
+}
