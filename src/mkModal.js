@@ -7,28 +7,25 @@ const mkModalContent = (id, content) => {
   return modal;
 };
 
-const mkModalTrigger = (id, triggerName, modal) => {
+const mkModalTrigger = (container, id, triggerLabel, modal) => {
   const trigger = document.createElement("button");
   trigger.classList.add("modal-trigger");
-  trigger.innerHTML = triggerName;
+  trigger.innerHTML = triggerLabel;
   trigger.setAttribute("data-modal", id);
   trigger.addEventListener('click',()=>{
-    document.body.appendChild(modal);
+    container.appendChild(modal);
     document.querySelector('.modal-bg').classList.add('modal-open');
     document.querySelector(`#${id}`).classList.add('modal-open');
   })
   return trigger;
 };
 
-const mkModalObj = (id, triggerName, content)=>{
+const mkTrigger = (container, id, triggerLabel, content)=>{
     const modal = mkModalContent(id, content);
-    const obj = {
-        modal,
-        trigger: mkModalTrigger(id, triggerName, modal)
-    }
-    return obj;
+    const trigger = mkModalTrigger(container, id, triggerLabel, modal);
+    return trigger;
 };
 
-export default mkModalObj;
+export default mkTrigger;
 
 
