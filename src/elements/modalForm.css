@@ -9,7 +9,7 @@
         border-radius: .5rem;
         display: flex;
         flex-direction: column;
-        gap: .25rem;
+        gap: .4rem;
         padding: 1rem;
         position: relative;
         > p{
@@ -21,16 +21,17 @@
             font-weight: 300;
         }
     }
-    > fieldset{
-        
-        > div{
-            width: 100%;
-        }
-    }
+
 }
 .list-input-div{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     >input{width:75%}
+}
+.todo-misc{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: end;
+    gap: .3rem;
 }

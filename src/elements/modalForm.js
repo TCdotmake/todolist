@@ -1,5 +1,9 @@
 import formCss from './modalForm.css';
-
+import LP from '../icons/lp.png';
+import MP from '../icons/mp.png';
+import HP from '../icons/hp.png';
+import Calendar from '../icons/calendar.png';
+import mkIcon from '../icons/mkIcon';
 const form = document.createElement('form');
 form.classList.add('modal-form');
 
@@ -69,9 +73,24 @@ desc.setAttribute('type','text');
 desc.setAttribute('name', 'desciption');
 desc.setAttribute('placeholder', 'Description');
 
+const todoMisc = document.createElement('div');
+todoMisc.classList.add('todo-misc');
+const lpIcon = mkIcon(LP);
+const mpIcon = mkIcon(MP );
+const hpIcon = mkIcon(HP);
+const calendarIcon = mkIcon(Calendar);
+
+const datePicker = document.createElement('input');
+datePicker.setAttribute('type','date');
+
+todoMisc.appendChild(lpIcon);
+// todoMisc.appendChild(calendarIcon);
+todoMisc.appendChild(datePicker);
+
 todoDiv.appendChild(todoLabel);
 todoDiv.appendChild(toDo);
 todoDiv.appendChild(desc);
+todoDiv.appendChild(todoMisc);
 
 //assembly
 form.appendChild(listDiv);
