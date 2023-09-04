@@ -12,10 +12,10 @@ const exitIcon = mkIcon(Exit);
 const modalBtnBar = document.createElement('div');
 modalBtnBar.classList.add('modal-btn-bar');
 
-const next = document.createElement('button');
-next.innerHTML = 'Add';
-next.classList.add('modal-btn');
-next.classList.add('confirm-btn');
+const addToDo = document.createElement('button');
+addToDo.innerHTML = 'Add';
+addToDo.classList.add('modal-btn');
+addToDo.classList.add('confirm-btn');
 const reset = document.createElement('button');
 reset.innerHTML = 'Reset';
 reset.classList.add('modal-btn');
@@ -25,7 +25,7 @@ modalWindow.appendChild(exitIcon);
 
 modalWindow.appendChild(form);
 
-modalBtnBar.appendChild(next);
+modalBtnBar.appendChild(addToDo);
 modalBtnBar.appendChild(reset);
 modalWindow.appendChild(modalBtnBar);
 

@@ -1,14 +1,19 @@
 .modal-form{
     align-self: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
     > div{
+        width: 100%;
         border: 1px solid var(--darkest);
         border-radius: .5rem;
         display: flex;
         flex-direction: column;
+        gap: .25rem;
         padding: 1rem;
         position: relative;
-        > label{
-            font-size: .75rem;
+        > p{
+            font-size: 1rem;
             position: absolute;
             top: -1.3ch;
             background-color: white;
@@ -16,4 +21,16 @@
             font-weight: 300;
         }
     }
+    > fieldset{
+        
+        > div{
+            width: 100%;
+        }
+    }
+}
+.list-input-div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    >input{width:75%}
 }
