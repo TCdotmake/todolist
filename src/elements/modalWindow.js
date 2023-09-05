@@ -19,14 +19,14 @@ addToDo.classList.add('confirm-btn');
 const reset = document.createElement('button');
 reset.innerHTML = 'Reset';
 reset.classList.add('modal-btn');
-
+modalBtnBar.appendChild(addToDo);
+modalBtnBar.appendChild(reset);
 //assembly
 modalWindow.appendChild(exitIcon);
 
 modalWindow.appendChild(form);
 
-modalBtnBar.appendChild(addToDo);
-modalBtnBar.appendChild(reset);
+
 modalWindow.appendChild(modalBtnBar);
 
 //event listener
@@ -36,10 +36,10 @@ exitIcon.addEventListener('click',()=>{
         item.classList.remove('modal-open');
     }
     //clean up
-    let content = document.querySelectorAll('.modal-content');
-    for(let child of content){
-        child.parentNode.removeChild(child);
-    }
+    // let content = document.querySelectorAll('.modal-content');
+    // for(let child of content){
+    //     child.parentNode.removeChild(child);
+    // }
 })
 
 export default modalWindow;

@@ -3,6 +3,7 @@ const creationMethods = {
   mkList: function (name) {
     const list = {
       name,
+      expand: false,
       ...mkContainer(),
     };
     return list;

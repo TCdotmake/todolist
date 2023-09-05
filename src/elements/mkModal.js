@@ -8,12 +8,13 @@ const mkModalContent = (id, content) => {
 };
 
 const mkModalTrigger = (container, id, triggerLabel, modal) => {
+  container.appendChild(modal);
   const trigger = document.createElement("button");
   trigger.classList.add("modal-trigger");
   trigger.innerHTML = triggerLabel;
   trigger.setAttribute("data-modal", id);
   trigger.addEventListener('click',()=>{
-    container.appendChild(modal);
+    // container.appendChild(modal);
     document.querySelector('.modal-bg').classList.add('modal-open');
     document.querySelector(`#${id}`).classList.add('modal-open');
   })

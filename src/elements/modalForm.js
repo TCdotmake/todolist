@@ -4,6 +4,7 @@ import MP from '../icons/mp.png';
 import HP from '../icons/hp.png';
 import Calendar from '../icons/calendar.png';
 import mkIcon from '../icons/mkIcon';
+import updateOptions from './updateOptions';
 const form = document.createElement('form');
 form.classList.add('modal-form');
 
@@ -15,26 +16,7 @@ listLabel.innerHTML = 'List';
 
 const listDropDown = document.createElement('select');
 listDropDown.setAttribute('name','select list');
-
-const defaultOption = document.createElement('option');
-defaultOption.innerHTML = 'Select List';
-defaultOption.setAttribute('selected', true);
-defaultOption.setAttribute('disabled', true);
-defaultOption.setAttribute('value', null);
-listDropDown.appendChild(defaultOption);
-
-const projArr = [
-    'general',
-    'shopping list',
-    'vacation planning'
-];
-
-for(let n of projArr){
-    const item = document.createElement('option');
-    item.innerHTML = n;
-    item.setAttribute('value', n);
-    listDropDown.appendChild(item);
-}
+listDropDown.setAttribute('id', 'listDropDown');
 
 const listInputDiv = document.createElement('div');
 listInputDiv.classList.add('list-input-div');

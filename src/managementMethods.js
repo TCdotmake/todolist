@@ -3,29 +3,12 @@ import mkContainer from "./mkContainer";
 import STORAGE from "./storageName";
 import localLoad from "./localLoad";
 import localSave from "./localSave";
+import updateVisual from "./elements/updateVisual";
 const managementMethods = {
-  //   addProject: function (projectName) {
-  //     const project = mkContainer();
-  //     project.name = projectName;
-  //     this.root.push(project);
-  //   },
-  //   findProject: function (id) {
-  //     let index = -1;
-  //     for (let n in this.root) {
-  //       if (this.root[n].id == id) {
-  //         index = n;
-  //       }
-  //     }
-  //     return index;
-  //   },
-  //   removeProject: function (id) {
-  //     const index = this.findProject(id);
-  //     if (index >= 0) {
-  //       this.root.splice(index, 1);
-  //     }
-  //   },
+
   updateMemory: function(){
     localSave(STORAGE, this);
+    updateVisual();
     console.log('Store Updated');
     console.log(localLoad(STORAGE));
   },
