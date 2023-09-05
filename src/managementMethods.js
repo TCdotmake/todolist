@@ -1,6 +1,9 @@
 import { uid } from "uid";
 import mkContainer from "./mkContainer";
-const rootMethods = {
+import STORAGE from "./storageName";
+import localLoad from "./localLoad";
+import localSave from "./localSave";
+const managementMethods = {
   //   addProject: function (projectName) {
   //     const project = mkContainer();
   //     project.name = projectName;
@@ -21,6 +24,11 @@ const rootMethods = {
   //       this.root.splice(index, 1);
   //     }
   //   },
+  updateMemory: function(){
+    localSave(STORAGE, this);
+    console.log('Store Updated');
+    console.log(localLoad(STORAGE));
+  },
   getID: function () {
     return this.id;
   },
@@ -30,7 +38,7 @@ const rootMethods = {
     }
     if (obj.children.length > 0) {
       for (let child of obj.children) {
-        let result = searchObj(child, id);
+        let result = this.searchObj(child, id);
         if (result) {
           return result;
         }
@@ -42,6 +50,7 @@ const rootMethods = {
     item.parentID = parentID;
     const parent = this.searchObj(this, parentID);
     parent.children.push(item);
+    this.updateMemory();
   },
   getItem: function (id){
     return this.searchObj(this, id);
@@ -56,8 +65,9 @@ const rootMethods = {
         }
     }
     parent.children.splice(index, 1);
+    this.updateMemory();
   }
   
 };
 
-export default rootMethods;
+export default managementMethods;
