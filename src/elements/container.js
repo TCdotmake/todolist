@@ -1,13 +1,13 @@
 import containerCSS from './container.css';
+import addBtnCSS from './addBtn.css';
 import header from './header';
 import nav from './navBar';
 import content from './content';
 import footer from './footer';
-import addBtn from './addBtn';
 import modal_bg from './modalBGandCSS';
-import mkTrigger from '../mkModal';
-import todoForm from '../todoForm';
+import mkTrigger from './mkModal';
 import modalWindow from './modalWindow';
+
 const container = document.createElement('div');
 container.setAttribute('id', 'container');
 

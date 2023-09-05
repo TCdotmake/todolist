@@ -3,16 +3,17 @@ import colorCSS from './colors.css';
 import css from "./style.css";
 import opensansCSS from './fonts/opensans/opensans.css';
 //import visual elements
-import header from './elements/header';
-import footer from './elements/footer';
-import nav from './elements/navBar';
-
 import container from './elements/container';
-// document.body.appendChild(header);
-// document.body.appendChild(nav);
-// document.body.appendChild(footer);
+import mkApp from './mkApp';
+// import application logic
 
+// mounting visual
 document.body.appendChild(container);
+
+//app
+const app = mkApp();
+console.log(app);
+
 
 // eventListeners
 
