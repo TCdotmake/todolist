@@ -66,8 +66,13 @@ const managementMethods = {
     }
     parent.children.splice(index, 1);
     this.updateMemory();
+  },
+  addList: function(name){
+    this.addItem(this.id, this.mkList(name));
+  },
+  addTodo: function(parentID, name, desc, due, priority){
+    this.addItem(parentID, mkTodo(name, desc, due, priority));
   }
-  
 };
 
 export default managementMethods;

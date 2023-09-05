@@ -4,18 +4,13 @@ import css from "./style.css";
 import opensansCSS from './fonts/opensans/opensans.css';
 //import visual elements
 import container from './elements/container';
-import mkApp from './mkApp';
-import STORAGE from './storageName';
+import app from './app';
 // import application logic
 
 // mounting visual
 document.body.appendChild(container);
 
 //app
-const app = mkApp(STORAGE);
-const testProj = app.mkProj('test');
-app.addItem(app.id, testProj);
-app.removeItem(testProj.id);
 console.log(app);
 
 
