@@ -8,7 +8,6 @@ module.exports = {
     mkContainer: './src/mkContainer.js',
     mkProject: './src/mkProject.js',
     mkTodo: './src/mkTodo.js',
-    
   },
   output: {
     filename: "[name].bundle.js",
@@ -18,6 +17,7 @@ module.exports = {
   devtool: "inline-source-map",
   devServer: {
     static: "./dist",
+
   },
   plugins: [
     new HtmlWebpackPlugin({

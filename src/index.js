@@ -3,11 +3,16 @@ import colorCSS from './colors.css';
 import css from "./style.css";
 import opensansCSS from './fonts/opensans/opensans.css';
 //import visual elements
-
 import container from './elements/container';
+import app from './app';
+// import application logic
 
-
+// mounting visual
 document.body.appendChild(container);
+
+//app
+console.log(app);
+
 
 // eventListeners
 
