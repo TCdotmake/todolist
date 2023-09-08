@@ -1,4 +1,5 @@
 import app from "../app";
+import validateEntry from "./validateEntry";
 // list section
 const listDiv = document.createElement('div');
 
@@ -32,10 +33,27 @@ listDiv.appendChild(listInputDiv);
 
 addList.addEventListener('click', (e)=>{
     e.preventDefault();
-    if(listInput.value != ''){
+    if(listInput.value != '' && listInput.value != null){
     app.addList(listInput.value);
     listInput.value = '';
     }
 })
+
+listDropDown.addEventListener('change',(e)=>{
+    e.preventDefault();
+    const selectedID = e.target.options[e.target.selectedIndex].dataset.id;
+    listDropDown.dataset.id = selectedID;
+})
+
+// listDropDown.addEventListener('change', (e)=>{
+//     e.preventDefault();
+//     const addTodo = document.getElementById('addTodo');
+//     if(validateEntry()){
+//         addTodo.setAttribute('disabled', false);
+//     }
+//     else{
+//         addTodo.setAttribute('disabled', true);
+//     }
+// })
 
 export default listDiv;

@@ -16,6 +16,7 @@ const updateOptions = () => {
     const item = document.createElement("option");
     item.innerHTML = list.name;
     item.setAttribute("value", list.name);
+    item.dataset.id = list.id;
     listDropDown.appendChild(item);
   }
 };

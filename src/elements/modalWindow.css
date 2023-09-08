@@ -40,3 +40,18 @@
     color: var(--white);
     border: none;
 }
+.priority-btn{
+    border: none;
+    > *{
+        width: 4ch;
+    }
+}
+.Low{
+    background-color: rgb(85, 176, 85);
+}
+.Med{
+    background-color: rgb(187, 187, 41);
+}
+.High{
+    background-color: rgb(208, 70, 70);
+}

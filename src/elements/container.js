@@ -17,11 +17,9 @@ mid.setAttribute('id', 'mid');
 mid.appendChild(nav);
 mid.appendChild(content);
 
-
 const addModal = mkModalContent('add-modal',modalWindow);
 const addTrigger = mkModalTrigger('+', addModal);
 addTrigger.classList.add('add-btn');
-
 
 container.appendChild(header);
 container.appendChild(mid);
