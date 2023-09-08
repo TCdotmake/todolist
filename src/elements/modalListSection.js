@@ -45,15 +45,4 @@ listDropDown.addEventListener('change',(e)=>{
     listDropDown.dataset.id = selectedID;
 })
 
-// listDropDown.addEventListener('change', (e)=>{
-//     e.preventDefault();
-//     const addTodo = document.getElementById('addTodo');
-//     if(validateEntry()){
-//         addTodo.setAttribute('disabled', false);
-//     }
-//     else{
-//         addTodo.setAttribute('disabled', true);
-//     }
-// })
-
 export default listDiv;

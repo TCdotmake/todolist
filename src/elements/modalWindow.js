@@ -3,7 +3,7 @@ import Exit from '../icons/exit.png';
 import mkIcon from '../icons/mkIcon';
 import form from './modalForm';
 import validateEntry from './validateEntry';
-
+import app from '../app';
 const modalWindow = document.createElement('div');
 modalWindow.classList.add('modal-window');
 
@@ -42,19 +42,19 @@ exitIcon.addEventListener('click',()=>{
 addToDo.addEventListener('click', (e)=>{
     e.preventDefault();
     if(validateEntry()){
-        const listDropDown = document.getElementById('listDropDown');
-        const todoName = document.getElementById('todoName');
-        const desc = document.getElementById('desc');
-        const dueDate = document.getElementById('dueDate');
-        const priority = document.getElementById('todoMisc').firstChild;
-        const todoObj = {
-            listID: listDropDown.dataset.id,
-            name: todoName.value,
-            desc: desc.value,
-            dueDate: dueDate.value,
-            priority: priority.dataset.priority
-        }
-        console.log(todoObj);
+        const parentID = document.getElementById('listDropDown').dataset.id;
+        const name = document.getElementById('todoName').value;
+        const desc = document.getElementById('desc').value;
+        const due = document.getElementById('dueDate').value;
+        const priority = document.getElementById('todoMisc').firstChild.dataset.priority;
+        // const todoObj = {
+        //     parentID: listDropDown.dataset.id,
+        //     name: todoName.value,
+        //     desc: desc.value,
+        //     due: dueDate.value,
+        //     priority: priority.dataset.priority
+        // }
+        app.addTodo(parentID, name, desc, due, priority);
     }
 
 })
