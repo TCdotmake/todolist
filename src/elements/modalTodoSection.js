@@ -1,8 +1,4 @@
-import LP from '../icons/lp.png';
-import MP from '../icons/mp.png';
-import HP from '../icons/hp.png';
-import mkIcon from '../icons/mkIcon';
-import validateEntry from './validateEntry';
+import { lpIcon, mpIcon, hpIcon } from "./priorityIcons";
 
 
 // todo section
@@ -25,25 +21,6 @@ desc.setAttribute('id','desc');
 const todoMisc = document.createElement('div');
 todoMisc.classList.add('todo-misc');
 todoMisc.setAttribute('id', 'todoMisc');
-
-let lpIcon, mpIcon, hpIcon;
-
-const priorityArr = ['Low', 'Med', 'High'];
-const btnArr = [];
-for(let n of priorityArr){
-    const btn = document.createElement('button');
-    const label = document.createElement('p');
-    label.innerHTML = n;
-    btn.appendChild(label);
-    btn.classList.add('modal-btn');
-    btn.classList.add('confirm-btn');
-    btn.classList.add('priority-btn');
-    btn.classList.add(n);
-    btn.dataset.priority = n;
-    btnArr.push(btn);
-}
-
-[lpIcon, mpIcon, hpIcon] = [...btnArr];
 
 const datePicker = document.createElement('input');
 datePicker.setAttribute('type','date');
@@ -70,14 +47,5 @@ hpIcon.addEventListener('click', (e)=>{
     e.preventDefault();
     hpIcon.replaceWith(lpIcon);
 })
-// toDo.addEventListener('change', (e)=>{
-//     e.preventDefault();
-//     const addTodo = document.getElementById('addTodo');
-//     if(validateEntry()){
-//         addTodo.setAttribute('disabled', false);
-//     }
-//     else{
-//         addTodo.setAttribute('disabled', true);
-//     }
-// })
+
 export default todoDiv;
