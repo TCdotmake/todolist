@@ -1,0 +1,25 @@
+.todo-item-div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 0.875rem;
+    color: var(--darkest);
+    > div{
+        display: flex;
+        flex-direction: column;
+    }
+    > button{
+        margin-left: auto;
+    }
+
+}
+.todo-desc{
+    font-size: 0.75rem;
+    color: var(--darker);
+}
+.todo-display-section{
+    display: flex;
+    flex-direction: column;
+    width: clamp(18rem, 85%, 28rem);
+    padding: 0 1.5rem;
+}
