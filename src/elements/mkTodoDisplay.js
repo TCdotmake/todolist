@@ -6,6 +6,7 @@ const mkTodoElement = (todoObj)=>{
     itemDiv.dataset.id = todoObj.id;
     itemDiv.classList.add('todo-item-div');
     const checkBox = document.createElement('div');
+    checkBox.classList.add('checkBox');
     const todoDiv = document.createElement('div');
     const todoName = document.createElement('p');
     todoName.innerHTML = todoObj.name;
