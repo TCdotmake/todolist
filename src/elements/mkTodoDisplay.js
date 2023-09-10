@@ -1,6 +1,23 @@
 import todoCSS from './todo.css';
 import app from "../app";
 import mkPriorityIcon from "./mkPriorityIcon";
+
+function addSelect(parentNode, target){
+    if(parentNode.childnodes){
+        const children = parentNode.childnodes;
+        for(let index in children){
+            children[index].addEventListener('click', (e)=>{
+                e.preventDefault();
+                let current = document.querySelectorAll(".selected");
+                if (current.length > 0) {
+                  for (let n of current) n.classList.remove("selected");
+                }
+                target.classList.add('selected');
+            })
+        }
+    }
+}
+
 const mkTodoElement = (todoObj)=>{
     const itemDiv = document.createElement('div');
     itemDiv.dataset.id = todoObj.id;
@@ -19,10 +36,64 @@ const mkTodoElement = (todoObj)=>{
     //assembly
     todoDiv.appendChild(todoName);
     todoDiv.appendChild(todoDesc);
+
     itemDiv.appendChild(checkBox);
     itemDiv.appendChild(todoDiv);
     itemDiv.appendChild(icon);
     itemDiv.appendChild(dueDate);
+
+    itemDiv.addEventListener('click', (e)=>{
+        e.preventDefault();
+        let current = document.querySelectorAll(".selected");
+        if (current.length > 0) {
+          for (let n of current) n.classList.remove("selected");
+        }
+        itemDiv.classList.add('selected');
+    })
+
+    todoDiv.addEventListener('click', (e)=>{
+        e.preventDefault();
+        let current = document.querySelectorAll(".selected");
+        if (current.length > 0) {
+          for (let n of current) n.classList.remove("selected");
+        }
+        itemDiv.classList.add('selected');
+    })
+
+    todoName.addEventListener('click', (e)=>{
+        e.preventDefault();
+        let current = document.querySelectorAll(".selected");
+        if (current.length > 0) {
+          for (let n of current) n.classList.remove("selected");
+        }
+        itemDiv.classList.add('selected');
+    })
+
+    todoDesc.addEventListener('click', (e)=>{
+        e.preventDefault();
+        let current = document.querySelectorAll(".selected");
+        if (current.length > 0) {
+          for (let n of current) n.classList.remove("selected");
+        }
+        itemDiv.classList.add('selected');
+    })
+    icon.addEventListener('click', (e)=>{
+        e.preventDefault();
+        let current = document.querySelectorAll(".selected");
+        if (current.length > 0) {
+          for (let n of current) n.classList.remove("selected");
+        }
+        itemDiv.classList.add('selected');
+    })
+    dueDate.addEventListener('click', (e)=>{
+        e.preventDefault();
+        let current = document.querySelectorAll(".selected");
+        if (current.length > 0) {
+          for (let n of current) n.classList.remove("selected");
+        }
+        itemDiv.classList.add('selected');
+    })
+
     return itemDiv;
 }
 

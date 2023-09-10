@@ -35,3 +35,14 @@
     width: clamp(18rem, 85%, 28rem);
     padding: 0 1.2rem;
 }
+
+.todo-item-div.selected{
+    color: var(--darkest);
+    font-size: .85rem;
+    > div{
+        > .todo-desc{
+            color: var(--medium);
+            font-size: .7rem;
+        }
+    }
+}

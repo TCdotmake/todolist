@@ -15,3 +15,9 @@
         color: var(--white);
     }
 }
+.list.selected{
+    background-color: var(--medium);
+    > p{
+        font-size: 1.3rem;
+    }
+}
