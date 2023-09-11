@@ -64,7 +64,13 @@ saveListEdit.addEventListener('click',(e)=>{
     if(name != null && name != ''){
         const id = listInput.dataset.id;
         app.editList(id, name);
+        listInput.dataset.current = name;
     }
+})
+
+resetListEdit.addEventListener('click', (e)=>{
+    e.preventDefault();
+    listInput.value = listInput.dataset.current;
 })
 
 export default editList;
