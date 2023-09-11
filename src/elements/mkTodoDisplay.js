@@ -21,6 +21,7 @@ function addSelect(parentNode, target){
 const mkTodoElement = (todoObj)=>{
     const itemDiv = document.createElement('div');
     itemDiv.dataset.id = todoObj.id;
+    itemDiv.dataset.type = 'todo';
     itemDiv.classList.add('todo-item-div');
     const checkBox = document.createElement('div');
     checkBox.classList.add('checkBox');
@@ -99,12 +100,14 @@ const mkTodoElement = (todoObj)=>{
 
 const mkTodoDisplay = (parentID)=>{
     const parent = app.getItem(parentID);
-    console.log(parent.children);
     const todoSection = document.createElement('div');
     todoSection.classList.add('todo-display-section');
-    for(let child of parent.children){
-        todoSection.appendChild(mkTodoElement(child));
+    if(parent.children.length>0){
+        for(let child of parent.children){
+            todoSection.appendChild(mkTodoElement(child));
+        }
     }
+
     return todoSection;
 }
 export default mkTodoDisplay;

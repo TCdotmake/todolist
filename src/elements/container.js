@@ -8,6 +8,7 @@ import modal_bg from './modalBGandCSS';
 import modalWindow from './modalWindow';
 import mkModalContent from './mkModalContent';
 import mkModalTrigger from './mkModalTrigger';
+import editList from './editListModal';
 
 const container = document.createElement('div');
 container.setAttribute('id', 'container');
@@ -21,12 +22,14 @@ const addModal = mkModalContent('add-modal',modalWindow);
 const addTrigger = mkModalTrigger('+', addModal);
 addTrigger.classList.add('add-btn');
 
+const editListModal = mkModalContent('edit-list-modal', editList);
+
 container.appendChild(header);
 container.appendChild(mid);
 container.appendChild(footer);
 
 container.appendChild(modal_bg);
-
+container.appendChild(editListModal);
 container.appendChild(addModal);
 container.appendChild(addTrigger);
 export default container;
