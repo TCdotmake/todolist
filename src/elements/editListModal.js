@@ -1,7 +1,8 @@
+import formCss from './modalForm.css';
 import modalWindowCSS from "./modalWindow.css";
 import Exit from "../icons/exit.png";
 import mkIcon from "../icons/mkIcon";
-
+import app from '../app';
 //exit btn
 const editList = document.createElement("div");
 editList.classList.add("modal-window");
@@ -49,11 +50,21 @@ editList.appendChild(form);
 editList.appendChild(modalBtnBar);
 
 //event listener
-exitIcon.addEventListener("click", () => {
+exitIcon.addEventListener("click", (e) => {
+    e.preventDefault();
   let opened = document.querySelectorAll(".modal-open");
   for (let item of opened) {
     item.classList.remove("modal-open");
   }
 });
+
+saveListEdit.addEventListener('click',(e)=>{
+    e.preventDefault();
+    const name = listInput.value;
+    if(name != null && name != ''){
+        const id = listInput.dataset.id;
+        app.editList(id, name);
+    }
+})
 
 export default editList;

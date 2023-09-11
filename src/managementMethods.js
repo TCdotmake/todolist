@@ -55,6 +55,10 @@ const managementMethods = {
   },
   addTodo: function(parentID, name, desc, due, priority){
     this.addItem(parentID, this.mkTodo(name, desc, due, priority));
+  },
+  editList: function(id, name){
+    this.getItem(id).name = name;
+    this.updateMemory();
   }
 };
 
