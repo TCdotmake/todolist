@@ -5,6 +5,7 @@ import mkIcon from "../icons/mkIcon";
 import app from "../app";
 // import { lpIcon, mpIcon, hpIcon } from "./priorityIcons";
 import mkPriorityIcon from "./mkPriorityIcon";
+import loadTodo from "./loadTodo";
 
 const editTodo = document.createElement("div");
 editTodo.classList.add("modal-window");
@@ -104,5 +105,10 @@ exitIcon.addEventListener("click", (e) => {
     item.classList.remove("modal-open");
   }
 });
+
+resetTodoEdit.addEventListener('click', (e)=>{
+    e.preventDefault();
+    loadTodo();
+})
 
 export default editTodo;
