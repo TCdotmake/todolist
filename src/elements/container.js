@@ -9,7 +9,7 @@ import modalWindow from './modalWindow';
 import mkModalContent from './mkModalContent';
 import mkModalTrigger from './mkModalTrigger';
 import editList from './editListModal';
-
+import editTodo from './editTodoModal';
 const container = document.createElement('div');
 container.setAttribute('id', 'container');
 
@@ -23,13 +23,14 @@ const addTrigger = mkModalTrigger('+', addModal);
 addTrigger.classList.add('add-btn');
 
 const editListModal = mkModalContent('edit-list-modal', editList);
-
+const editTodoModal = mkModalContent('edit-todo-modal', editTodo);
 container.appendChild(header);
 container.appendChild(mid);
 container.appendChild(footer);
 
 container.appendChild(modal_bg);
 container.appendChild(editListModal);
+container.appendChild(editTodoModal);
 container.appendChild(addModal);
 container.appendChild(addTrigger);
 export default container;
