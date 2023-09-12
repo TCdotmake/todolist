@@ -59,7 +59,14 @@ const managementMethods = {
   editList: function(id, name){
     this.getItem(id).name = name;
     this.updateMemory();
-  }
+  },
+  editTodo: function(id, {name, desc, due, priority}){
+    this.getItem(id).name = name;
+    this.getItem(id).desc = desc;
+    this.getItem(id).due = due;
+    this.getItem(id).priority = priority;
+    this.updateMemory();
+  },
 };
 
 export default managementMethods;

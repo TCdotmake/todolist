@@ -6,6 +6,7 @@ import app from "../app";
 // import { lpIcon, mpIcon, hpIcon } from "./priorityIcons";
 import mkPriorityIcon from "./mkPriorityIcon";
 import loadTodo from "./loadTodo";
+import saveTodo from "./saveTodoEdit";
 
 const editTodo = document.createElement("div");
 editTodo.classList.add("modal-window");
@@ -105,6 +106,11 @@ exitIcon.addEventListener("click", (e) => {
     item.classList.remove("modal-open");
   }
 });
+
+saveTodoEdit.addEventListener('click', (e)=>{
+    e.preventDefault();
+    saveTodo();
+})
 
 resetTodoEdit.addEventListener('click', (e)=>{
     e.preventDefault();
