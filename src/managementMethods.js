@@ -67,6 +67,10 @@ const managementMethods = {
     this.getItem(id).priority = priority;
     this.updateMemory();
   },
+  toggleComplete(id){
+    this.getItem(id).complete = !this.getItem(id).complete;
+    this.updateMemory();
+  },
 };
 
 export default managementMethods;

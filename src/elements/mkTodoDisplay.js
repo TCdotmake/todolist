@@ -33,7 +33,7 @@ const mkTodoElement = (todoObj)=>{
     todoDesc.classList.add('todo-desc');
     const icon = mkPriorityIcon(todoObj.priority);
     const dueDate = document.createElement('p');
-    dueDate.innerHTML = todoObj.due;
+    dueDate.innerHTML = todoObj.due || 'Anytime';
     //assembly
     todoDiv.appendChild(todoName);
     todoDiv.appendChild(todoDesc);
@@ -93,6 +93,13 @@ const mkTodoElement = (todoObj)=>{
           for (let n of current) n.classList.remove("selected");
         }
         itemDiv.classList.add('selected');
+    })
+
+    checkBox.addEventListener('click', e=>{
+        e.preventDefault();
+        const id = todoObj.id;
+        app.toggleComplete(id);
+        console.log(app.getItem(id).complete);
     })
 
     return itemDiv;
