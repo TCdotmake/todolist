@@ -62,6 +62,11 @@ trashIcon.addEventListener('click', e=>{
         if(item.children == null || item.children.length == 0){
             app.removeItem(id);
         }
+        else{
+            document.querySelector(".modal-bg").classList.add("modal-open");
+            document.getElementById('delete-list-modal').classList.add("modal-open");
+
+        }
     }
 })
 

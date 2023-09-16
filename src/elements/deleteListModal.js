@@ -64,6 +64,10 @@ deleteList.addEventListener("click", (e) => {
   e.preventDefault();
   const id = document.querySelector('.selected').dataset.id;
   app.removeItem(id);
+  let opened = document.querySelectorAll(".modal-open");
+  for (let item of opened) {
+    item.classList.remove("modal-open");
+  }
 });
 
 export default confirmDelete;
