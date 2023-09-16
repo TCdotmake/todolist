@@ -56,6 +56,13 @@ trashIcon.addEventListener('click', e=>{
     if(type == 'todo'){
         app.removeItem(id);
     }
+    if(type == 'list'){
+        const item = app.getItem(id);
+        console.log(item);
+        if(item.children == null || item.children.length == 0){
+            app.removeItem(id);
+        }
+    }
 })
 
 footer.appendChild(actionBar);

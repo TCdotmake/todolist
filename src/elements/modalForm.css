@@ -1,4 +1,5 @@
-.modal-form{
+.modal-form,
+.modal-msg{
     align-self: center;
     display: flex;
     flex-direction: column;
@@ -21,7 +22,6 @@
             font-weight: 300;
         }
     }
-
 }
 .list-input-div{
     display: flex;
