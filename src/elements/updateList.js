@@ -19,7 +19,7 @@ const updateList = () => {
     }
   };
 
-  if (app.filter != null) {
+  if (app.filter != null && app.filter != 'all') {
     const filterListObj = app.mkList(filter);
     const filterList = mkFilterList(filterListObj);
     content.appendChild(filterList);

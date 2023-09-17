@@ -86,7 +86,7 @@ const managementMethods = {
     this.filter = filter;
     this.updateFilterItems();
     this.filterExpand = true;
-    for(let list of this.children){
+    for (let list of this.children) {
       list.expand = false;
     }
     this.updateMemory();
@@ -154,20 +154,37 @@ const managementMethods = {
         break;
       default:
         filteredTodo = null;
-    };
-    if(filteredTodo != null){
-      this.filteredItems = filteredTodo.map(todo=>todo.id);
     }
-    else{this.filteredItems = null;}
+    if (filteredTodo != null) {
+      this.filteredItems = filteredTodo.map((todo) => todo.id);
+    } else {
+      this.filteredItems = null;
+    }
   },
-  toggleFilterExpand(){
-    if(this.filterExpand == null){
+  toggleFilterExpand() {
+    if (this.filterExpand == null) {
       this.filterExpand = true;
-    }
-    else{
+    } else {
       this.filterExpand = !this.filterExpand;
     }
     this.updateMemory();
+  },
+  removeFilterItems() {
+    if (this.filteredItems != null || this.filteredItems.length > 0) {
+      for (let id of this.filteredItems) {
+        const parentID = this.getItem(id).parentID;
+        const parent = this.getItem(parentID);
+        let index = -1;
+        for (let n in parent.children) {
+          if (parent.children[n].id == id) {
+            index = n;
+          }
+        }
+        parent.children.splice(index, 1);
+      }
+      this.updateFilterItems();
+      this.updateMemory();
+    }
   },
 };
 

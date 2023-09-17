@@ -13,6 +13,7 @@
         font-size: 1rem;
         font-weight: 100;
         color: var(--white);
+        text-transform: capitalize;
     }
 }
 .list.selected{

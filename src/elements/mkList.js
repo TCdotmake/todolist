@@ -1,6 +1,6 @@
 import listCSS from "./list.css";
 import ThreeDots from "../icons/threeDots.png";
-import Up from '../icons/up.png';
+import Up from "../icons/up.png";
 import mkIcon from "../icons/mkIcon";
 import app from "../app";
 const mkList = (listObj) => {
@@ -9,16 +9,19 @@ const mkList = (listObj) => {
   list.classList.add("list");
   list.dataset.id = id;
   list.dataset.selectTarget = id;
-  list.dataset.type = 'list';
+  list.dataset.type = "list";
   const listName = document.createElement("p");
   listName.innerText = listObj.name;
   listName.dataset.selectTarget = id;
   list.appendChild(listName);
-    let icon;
-    
-  if(listObj.expand){icon = mkIcon(Up);}
-  else{icon = mkIcon(ThreeDots);}
-  icon.dataset.type = 'list';
+  let icon;
+  
+  if (listObj.expand) {
+    icon = mkIcon(Up);
+  } else {
+    icon = mkIcon(ThreeDots);
+  }
+  icon.dataset.type = "list";
   list.appendChild(icon);
 
   list.addEventListener("click", (e) => {
@@ -36,15 +39,10 @@ const mkList = (listObj) => {
     }
   });
 
-  icon.addEventListener('click', e=>{
+  icon.addEventListener("click", (e) => {
     e.preventDefault();
-    if(icon.dataset.type == 'list'){
-      app.toggleExpand(id);
-    }
-    if(icon.dataset.type == 'filter'){
-      app.toggleFilterExpand();
-    }
-  })
+    app.toggleExpand(id);
+  });
 
   return list;
 };
