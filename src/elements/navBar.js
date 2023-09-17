@@ -1,4 +1,5 @@
 import navCSS from './navBar.css';
+import app from '../app';
 const nav = document.createElement('nav');
 nav.setAttribute('id', 'nav');
 
@@ -20,11 +21,22 @@ const mkNavBtn = (label)=>{
     return btn;
 }
 
+const btnArr = [];
+
 for(let n of navBtnArr){
-    filters.appendChild(mkNavBtn(n));
+    btnArr.push(mkNavBtn(n));
 }
 
+for(let n of btnArr){
+    n.addEventListener('click', e=>{
+        e.preventDefault();
+        app.changeFilter(n.getAttribute('id'));
+    })
+    filters.appendChild(n);
+}
 
 nav.appendChild(filters)
+
+
 
 export default nav;

@@ -14,6 +14,7 @@ document.body.appendChild(container);
 console.log(app);
 updateVisual();
 
+
 // eventListeners
 
 let shutModal = document.querySelectorAll('.modal-close');

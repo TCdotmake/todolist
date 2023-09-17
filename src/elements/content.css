@@ -13,26 +13,3 @@
         font-size: 1.3rem;
     }
 }
-.list.selected{
-    background-color: var(--medium);
-    > p{
-        font-size: 1.3rem;
-    }
-}
-/* 
-.list.selected{
-    font-size: 1.2rem;
-}
-
-.list{
-    > .selected{
-        font-size: 1.2rem;
-    }
-}
-
-.selected .todo-item-div{
-    font-size: .85rem;
-    > .todo-desc{
-        font-size: 0.7rem;
-    }
-} */

@@ -4,7 +4,7 @@ const defaultOption = document.createElement("option");
 defaultOption.innerHTML = "Select List";
 defaultOption.setAttribute("selected", true);
 defaultOption.setAttribute("disabled", true);
-defaultOption.setAttribute("value", null);
+defaultOption.setAttribute("value", 'default');
 
 const updateOptions = () => {
   const listDropDown = document.getElementById("listDropDown");

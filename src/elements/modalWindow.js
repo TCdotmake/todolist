@@ -20,7 +20,7 @@ addToDo.innerHTML = "Add";
 addToDo.classList.add("modal-btn");
 addToDo.classList.add("confirm-btn");
 addToDo.setAttribute("id", "addTodo");
-// addToDo.setAttribute('disabled', true);
+
 const reset = document.createElement("button");
 reset.innerHTML = "Reset";
 reset.classList.add("modal-btn");
