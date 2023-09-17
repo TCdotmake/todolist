@@ -85,6 +85,10 @@ const managementMethods = {
   changeFilter(filter) {
     this.filter = filter;
     this.updateFilterItems();
+    this.filterExpand = true;
+    for(let list of this.children){
+      list.expand = false;
+    }
     this.updateMemory();
   },
   getToday() {
@@ -155,6 +159,15 @@ const managementMethods = {
       this.filteredItems = filteredTodo.map(todo=>todo.id);
     }
     else{this.filteredItems = null;}
+  },
+  toggleFilterExpand(){
+    if(this.filterExpand == null){
+      this.filterExpand = true;
+    }
+    else{
+      this.filterExpand = !this.filterExpand;
+    }
+    this.updateMemory();
   },
 };
 
