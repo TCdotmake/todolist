@@ -20,6 +20,17 @@ function addSelect(parentNode, target){
     }
 }
 
+function formatDueDate(due){
+    if(due == null || due == ''){
+        return null;
+    }
+    const arr = due.split('-');
+    let year, month, date;
+    [year, month, date] = arr;
+    year = year.slice(2,4);
+    return `${month}.${date}.${year}`;
+}
+
 const mkTodoElement = (todoObj)=>{
     const itemDiv = document.createElement('div');
     itemDiv.dataset.id = todoObj.id;
@@ -39,7 +50,7 @@ const mkTodoElement = (todoObj)=>{
     todoDesc.classList.add('todo-desc');
     const icon = mkPriorityIcon(todoObj.priority);
     const dueDate = document.createElement('p');
-    dueDate.innerHTML = todoObj.due || 'Anytime';
+    dueDate.innerHTML = formatDueDate(todoObj.due) || 'Anytime';
     //assembly
     todoDiv.appendChild(todoName);
     todoDiv.appendChild(todoDesc);

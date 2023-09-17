@@ -33,23 +33,36 @@
 @media (orientation: landscape){
     #mid{
         flex-direction: row;
-    }
-    #nav{
-        width: 25vw;
-        height: 100%;
-        justify-content: flex-end;
-        >ul{
-            flex-direction: column;
-            margin-right: 1.5rem;
-            gap: 1rem;
+        >     #nav{
+            width: 25vw;
+            height: 100%;
+            justify-content: flex-end;
+            >ul{
+                flex-direction: column;
+                margin-right: 1.5rem;
+                gap: 1rem;
+            }
         }
-    }
-    #content{
-        align-items: flex-start;
+        >    #content{
+            align-items: flex-start;
+            padding-left: 3rem;
+            width: auto;
+            > .list{
+                width: 70%;
+            }
+            > .todo-display-section{
+                width: 60%;
+                margin-left: 5%;
+            }
+        }
+
     }
 
-    #footer ul{
-        width: auto;
-        margin-left: calc(25vw + 3rem);
+    #footer{
+        > #action-bar{
+            justify-content: flex-start;
+            margin-left: calc(25vw + 3rem);
+        }
+
     }
 }

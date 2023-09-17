@@ -18,7 +18,7 @@ const trashIcon = mkIcon(Trash);
 const icons = [pinIcon, editIcon, trashIcon];
 
 const actionBar = document.createElement('ul');
-
+actionBar.setAttribute('id', 'action-bar');
 for(let icon of icons){
     const item = document.createElement('li');
     item.appendChild(icon);
