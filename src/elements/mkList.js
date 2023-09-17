@@ -1,17 +1,23 @@
 import listCSS from "./list.css";
 import ThreeDots from "../icons/threeDots.png";
+import Up from '../icons/up.png';
 import mkIcon from "../icons/mkIcon";
+import app from "../app";
 const mkList = (listObj) => {
   const list = document.createElement("div");
+  const id = listObj.id;
   list.classList.add("list");
-  list.dataset.id = listObj.id;
-  list.dataset.selectTarget = listObj.id;
+  list.dataset.id = id;
+  list.dataset.selectTarget = id;
   list.dataset.type = 'list';
   const listName = document.createElement("p");
   listName.innerText = listObj.name;
-  listName.dataset.selectTarget = listObj.id;
+  listName.dataset.selectTarget = id;
   list.appendChild(listName);
-  list.appendChild(mkIcon(ThreeDots));
+    let icon;
+  if(listObj.expand){icon = mkIcon(Up);}
+  else{icon = mkIcon(ThreeDots);}
+  list.appendChild(icon);
 
   list.addEventListener("click", (e) => {
     e.preventDefault();
@@ -27,6 +33,11 @@ const mkList = (listObj) => {
       }
     }
   });
+
+  icon.addEventListener('click', e=>{
+    e.preventDefault();
+    app.toggleExpand(id);
+  })
 
   return list;
 };

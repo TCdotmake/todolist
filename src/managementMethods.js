@@ -71,6 +71,10 @@ const managementMethods = {
     this.getItem(id).complete = !this.getItem(id).complete;
     this.updateMemory();
   },
+  toggleExpand(id){
+    this.getItem(id).expand = !this.getItem(id).expand;
+    this.updateMemory();
+  }
 };
 
 export default managementMethods;

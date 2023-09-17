@@ -1,6 +1,8 @@
 import todoCSS from './todo.css';
 import app from "../app";
 import mkPriorityIcon from "./mkPriorityIcon";
+import mkIcon from '../icons/mkIcon';
+import Check from '../icons/check.png';
 
 function addSelect(parentNode, target){
     if(parentNode.childnodes){
@@ -25,6 +27,10 @@ const mkTodoElement = (todoObj)=>{
     itemDiv.classList.add('todo-item-div');
     const checkBox = document.createElement('div');
     checkBox.classList.add('checkBox');
+    if(todoObj.complete){
+        const completed = mkIcon(Check);
+        checkBox.appendChild(completed);
+    }
     const todoDiv = document.createElement('div');
     const todoName = document.createElement('p');
     todoName.innerHTML = todoObj.name;

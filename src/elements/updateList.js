@@ -6,7 +6,6 @@ import mkTodoDisplay from "./mkTodoDisplay";
 
 const updateList = ()=>{
     const content = document.getElementById('content');
-    console.log(content);
     //clear out current items if any
     while(content.firstElementChild){
         content.firstElementChild.remove();
@@ -15,7 +14,7 @@ const updateList = ()=>{
     for(let listObj of app.children){
         const item = mkList(listObj);
         content.appendChild(item);
-    if(listObj.children.length > 0){
+    if(listObj.children.length > 0 && listObj.expand){
         const todos = mkTodoDisplay(listObj.id);
         content.appendChild(todos);
     }
