@@ -4,6 +4,7 @@ import Up from "../icons/up.png";
 import mkIcon from "../icons/mkIcon";
 import app from "../app";
 const mkList = (listObj) => {
+
   const list = document.createElement("div");
   const id = listObj.id;
   list.classList.add("list");
@@ -14,8 +15,19 @@ const mkList = (listObj) => {
   listName.innerText = listObj.name;
   listName.dataset.selectTarget = id;
   list.appendChild(listName);
-  let icon;
   
+  if(listObj.children){
+    const total = listObj.children.length;
+    let completed = 0;
+    for(let todo of listObj.children){
+      if(todo.complete){completed += 1;}
+    }
+    const counter = document.createElement('p');
+    counter.innerHTML = `(${completed}/${total})`;
+    list.appendChild(counter);
+  }
+  
+  let icon;
   if (listObj.expand) {
     icon = mkIcon(Up);
   } else {

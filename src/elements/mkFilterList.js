@@ -14,6 +14,18 @@ function mkFilterList(listObj) {
   } else {
     icon = mkIcon(ThreeDots);
   }
+
+  console.log(app.filteredItems.length);
+  const total = app.filteredItems.length;
+  let completed = 0;
+  for(let id of app.filteredItems){
+    if(app.getItem(id).complete){completed +=1;}
+  }
+  const counter = list.children[1];
+  counter.innerHTML = `(${completed}/${total})`;
+  
+
+
   list.lastChild.replaceWith(icon);
   list.lastChild.dataset.type = "filter";
 
