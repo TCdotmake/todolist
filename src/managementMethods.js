@@ -134,6 +134,9 @@ const managementMethods = {
       }
       return false;
     },
+    pinned(obj) {
+      return obj.pinned ? true : false;
+    },
   },
   getAllTodo() {
     const allTodo = [];
@@ -157,6 +160,9 @@ const managementMethods = {
         break;
       case "anytime":
         filteredTodo = allTodo.filter(this.filters.anytime);
+        break;
+      case "pinned":
+        filteredTodo = allTodo.filter(this.filters.pinned);
         break;
       default:
         filteredTodo = null;
