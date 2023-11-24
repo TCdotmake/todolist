@@ -1,5 +1,3 @@
-import { uid } from "uid";
-import mkContainer from "./mkContainer";
 import STORAGE from "./storageName";
 import localLoad from "./localLoad";
 import localSave from "./localSave";
@@ -74,6 +72,14 @@ const managementMethods = {
   },
   toggleComplete(id) {
     this.getItem(id).complete = !this.getItem(id).complete;
+    this.updateMemory();
+  },
+  togglePinned(id) {
+    if (this.getItem(id).pinned == null) {
+      this.getItem(id).pinned = true;
+    } else {
+      this.getItem(id).pinned = !this.getItem(id).pinned;
+    }
     this.updateMemory();
   },
   toggleExpand(id) {

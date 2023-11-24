@@ -23,6 +23,7 @@ const mkList = (listObj) => {
       if(todo.complete){completed += 1;}
     }
     const counter = document.createElement('p');
+    counter.classList.add('counter');
     counter.innerHTML = `(${completed}/${total})`;
     list.appendChild(counter);
   }

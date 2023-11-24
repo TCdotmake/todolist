@@ -67,7 +67,20 @@ trashIcon.addEventListener("click", (e) => {
   }
   if (type == "filter") {
     document.querySelector(".modal-bg").classList.add("modal-open");
-      document.getElementById("delete-filter-modal").classList.add("modal-open");
+    document.getElementById("delete-filter-modal").classList.add("modal-open");
+  }
+});
+
+pinIcon.addEventListener("click", (e) => {
+  e.preventDefault();
+  const selected = document.querySelector(".selected");
+  const type = selected.dataset.type;
+  const id = selected.dataset.id;
+  if (type == "todo") {
+    if (selected.classList.contains("pinned")) {
+      selected.classList.remove("pinned");
+    } else selected.classList.add("pinned");
+    app.togglePinned(id);
   }
 });
 

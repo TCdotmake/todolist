@@ -10,8 +10,8 @@ const mkTodoDisplay = (children) => {
       todoSection.appendChild(mkTodoElement(child));
     }
   } else {
-    const empty = document.createElement('p');
-    empty.innerHTML = 'Wow, such empty';
+    const empty = document.createElement("p");
+    empty.innerHTML = "Empty list";
     todoSection.appendChild(empty);
   }
 

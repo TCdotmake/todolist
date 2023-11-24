@@ -1,3 +1,5 @@
+/*icon*/
+@import "./icons/icons.css";
 /*css reset*/
 html {
   box-sizing: border-box;
@@ -22,7 +24,6 @@ ol,
 ul {
   margin: 0;
   padding: 0;
-
 }
 
 ol,
@@ -30,14 +31,14 @@ ul {
   list-style: none;
 }
 
-:root{
-  font-family: 'opensans';
+:root {
+  font-family: "opensans";
   font-weight: 200;
   font-size: 16px;
 }
 
-body{
+body {
   position: relative;
-  width: 100%;;
+  width: 100%;
   min-height: 100vh;
 }

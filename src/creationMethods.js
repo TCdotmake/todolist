@@ -15,6 +15,7 @@ const creationMethods = {
       due,
       priority,
       complete: false,
+      pinned: false,
       ...mkContainer(),
     };
     return todo;

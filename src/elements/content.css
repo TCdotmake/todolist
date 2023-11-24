@@ -1,15 +1,19 @@
-#content{
-    display: flex;
-    flex-direction: column;
-    overflow-y: auto;
-    justify-content: flex-start;
-    align-items: center;
-    padding-bottom: 1.5rem;
+#content {
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  justify-content: flex-start;
+  align-items: center;
+  padding-bottom: 1.5rem;
 }
 
-.selected{
-    font-style: italic;
-    & .list{
-        font-size: 1.3rem;
-    }
+.selected {
+  font-style: italic;
+  & .list {
+    font-size: 1.3rem;
+  }
+}
+
+.pinned {
+  background-color: hotpink;
 }
