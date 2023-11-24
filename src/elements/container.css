@@ -1,68 +1,74 @@
-#container{
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
+#container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 #header,
 #nav,
-#footer{
-    flex: none;
+#footer {
+  flex: none;
 }
 
-#mid{
-    display: flex;
-    flex-direction: column;
-    overflow-y: scroll;
+#mid {
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
 }
 
 #content,
-#mid{
-    flex: 1 1 auto
+#mid {
+  flex: 1 1 auto;
 }
 
 /*responsive design*/
 
-@media (orientation: landscape){
-    #nav ul{
-        margin: 0;
-    }
+@media (orientation: portrait) {
+  #nav {
+    align-items: center;
+  }
 }
 
-@media (orientation: landscape){
-    #mid{
-        flex-direction: row;
-        >     #nav{
-            width: 25vw;
-            height: 100%;
-            justify-content: flex-end;
-            >ul{
-                flex-direction: column;
-                margin-right: 1.5rem;
-                gap: 1rem;
-            }
-        }
-        >    #content{
-            align-items: flex-start;
-            padding-left: 3rem;
-            width: auto;
-            > .list{
-                width: 70%;
-            }
-            > .todo-display-section{
-                width: 60%;
-                margin-left: 5%;
-            }
-        }
+@media (orientation: landscape) {
+  #nav ul {
+    margin: 0;
+  }
+}
 
+@media (orientation: landscape) {
+  #mid {
+    flex-direction: row;
+    > #nav {
+      width: 25vw;
+      height: 100%;
+      justify-content: flex-end;
+      align-items: flex-start;
+      padding-top: 1.5rem;
+      > ul {
+        flex-direction: column;
+        margin-right: 1.5rem;
+        gap: 1rem;
+      }
     }
-
-    #footer{
-        > #action-bar{
-            justify-content: flex-start;
-            margin-left: calc(25vw + 3rem);
-        }
-
+    > #content {
+      align-items: flex-start;
+      padding-left: 3rem;
+      width: auto;
+      > .list {
+        width: 70%;
+      }
+      > .todo-display-section {
+        width: 60%;
+        margin-left: 5%;
+      }
     }
+  }
+
+  #footer {
+    > #action-bar {
+      justify-content: flex-start;
+      margin-left: calc(25vw + 3rem);
+    }
+  }
 }
