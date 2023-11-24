@@ -3,8 +3,8 @@ import ThreeDots from "../icons/threeDots.png";
 import Up from "../icons/up.png";
 import mkIcon from "../icons/mkIcon";
 import app from "../app";
+import mkExpandBtn from "./mkExpandBtn";
 const mkList = (listObj) => {
-
   const list = document.createElement("div");
   const id = listObj.id;
   list.classList.add("list");
@@ -15,27 +15,31 @@ const mkList = (listObj) => {
   listName.innerText = listObj.name;
   listName.dataset.selectTarget = id;
   list.appendChild(listName);
-  
-  if(listObj.children){
+
+  if (listObj.children) {
     const total = listObj.children.length;
     let completed = 0;
-    for(let todo of listObj.children){
-      if(todo.complete){completed += 1;}
+    for (let todo of listObj.children) {
+      if (todo.complete) {
+        completed += 1;
+      }
     }
-    const counter = document.createElement('p');
-    counter.classList.add('counter');
+    const counter = document.createElement("p");
+    counter.classList.add("counter");
     counter.innerHTML = `(${completed}/${total})`;
     list.appendChild(counter);
   }
-  
-  let icon;
+
+  let btn;
   if (listObj.expand) {
-    icon = mkIcon(Up);
+    // icon = mkIcon(Up);
+    btn = mkExpandBtn.close();
   } else {
-    icon = mkIcon(ThreeDots);
+    // icon = mkIcon(ThreeDots);
+    btn = mkExpandBtn.open();
   }
-  icon.dataset.type = "list";
-  list.appendChild(icon);
+  btn.dataset.type = "list";
+  list.appendChild(btn);
 
   list.addEventListener("click", (e) => {
     e.preventDefault();
@@ -52,7 +56,7 @@ const mkList = (listObj) => {
     }
   });
 
-  icon.addEventListener("click", (e) => {
+  btn.addEventListener("click", (e) => {
     e.preventDefault();
     app.toggleExpand(id);
   });
