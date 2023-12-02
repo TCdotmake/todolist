@@ -1,8 +1,6 @@
 import mkList from "./mkList";
 import app from "../app";
-import ThreeDots from "../icons/threeDots.png";
-import Up from "../icons/up.png";
-import mkIcon from "../icons/mkIcon";
+
 import mkExpandBtn from "./mkExpandBtn";
 
 function mkFilterList(listObj) {

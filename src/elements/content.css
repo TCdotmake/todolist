@@ -20,5 +20,5 @@
 }
 
 .pinned {
-  background-color: hotpink;
+  background-color: var(--highlight);
 }

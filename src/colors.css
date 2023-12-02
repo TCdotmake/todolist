@@ -1,7 +1,17 @@
-:root{
-    --white: white;
-    --light: rgb(191, 191, 191);
-    --medium: gray;
-    --darker: rgb(64, 64, 64);
-    --darkest: black;
+/* :root {
+  --white: white;
+  --light: #ffd2fc;
+  --medium: #e980fc;
+  --darker: #b96ac9;
+  --darkest: #231b1b;
+  --highlight: #ddfff7;
+} */
+
+:root {
+  --white: white;
+  --light: #c388df;
+  --medium: #7353ba;
+  --darker: #44385f;
+  --darkest: #0f1020;
+  --highlight: #f5cefa;
 }

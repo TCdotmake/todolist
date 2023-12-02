@@ -1,57 +1,57 @@
-.modal-window{
-    max-height: 90vh;
-    overflow-y: scroll;
-    width: 19rem;
-    padding: .75rem;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    background-color: var(--white);
-    >.icon{
-        width: 1.8rem;
-        height: 1.8rem;
-        top: -.25rem;
-    }
-    >form{
-        width: 14rem;
-    }
+.modal-window {
+  max-height: 90vh;
+  overflow-y: scroll;
+  width: 19rem;
+  padding: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background-color: var(--white);
+  > .icon {
+    width: 1.8rem;
+    height: 1.8rem;
+    top: -0.25rem;
+  }
+  > form {
+    width: 14rem;
+  }
 }
 
-.modal-btn-bar{
-    width: 100%;
-    display: flex;
-    flex-direction: row-reverse;
-    gap: .5rem;
-    justify-content: end;
-    padding-right: 0.25rem;
-    padding-bottom: 0.25rem
+.modal-btn-bar {
+  width: 100%;
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 0.5rem;
+  justify-content: end;
+  padding-right: 0.25rem;
+  padding-bottom: 0.25rem;
 }
 
-.modal-btn{
-    font-size: .75rem;
-    font-weight: 100;
-    padding: .25rem .6rem;
-    border-radius: 0.635rem;
-    border: 1px solid var(--darkest);
+.modal-btn {
+  font-size: 0.75rem;
+  font-weight: 100;
+  padding: 0.25rem 0.6rem;
+  border-radius: 0.635rem;
+  border: 1px solid var(--darkest);
 }
-.confirm-btn{
-    background-color: var(--medium);
-    border: 1px solid var(--medium);
-    color: var(--white);
-    border: none;
+.confirm-btn {
+  background-color: var(--medium);
+  border: 1px solid var(--medium);
+  color: var(--white);
+  border: none;
 }
-.priority-btn{
-    border: none;
-    > *{
-        width: 4ch;
-    }
+.priority-btn {
+  border: none;
+  > * {
+    width: 4ch;
+  }
 }
-.Low{
-    background-color: rgb(85, 176, 85);
+.Low {
+  background-color: rgb(85, 176, 85);
 }
-.Med{
-    background-color: rgb(187, 187, 41);
+.Med {
+  background-color: rgb(217, 217, 46);
 }
-.High{
-    background-color: rgb(208, 70, 70);
+.High {
+  background-color: rgb(228, 67, 67);
 }

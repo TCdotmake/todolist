@@ -32,10 +32,8 @@ const mkList = (listObj) => {
 
   let btn;
   if (listObj.expand) {
-    // icon = mkIcon(Up);
     btn = mkExpandBtn.close();
   } else {
-    // icon = mkIcon(ThreeDots);
     btn = mkExpandBtn.open();
   }
   btn.dataset.type = "list";
