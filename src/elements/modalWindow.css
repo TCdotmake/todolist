@@ -32,7 +32,8 @@
   font-weight: 100;
   padding: 0.25rem 0.6rem;
   border-radius: 0.635rem;
-  border: 1px solid var(--darkest);
+  border: 1px solid var(--medium);
+  color: var(--medium);
 }
 .confirm-btn {
   background-color: var(--medium);
@@ -41,17 +42,18 @@
   border: none;
 }
 .priority-btn {
-  border: none;
+  border: 1px solid var(--light);
   > * {
     width: 4ch;
+    color: var(--darkest);
   }
 }
 .Low {
-  background-color: rgb(85, 176, 85);
+  background-color: rgb(119, 236, 119);
 }
 .Med {
-  background-color: rgb(217, 217, 46);
+  background-color: rgb(255, 247, 129);
 }
 .High {
-  background-color: rgb(228, 67, 67);
+  background-color: rgb(255, 137, 137);
 }

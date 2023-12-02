@@ -1,24 +1,27 @@
-#header{
-
-    width: 100%;
-    height: 5.3rem;
-    display: flex;
-    flex-direction: row;
-    gap: 1rem;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--darker);
+#header {
+  width: 100%;
+  height: 5.3rem;
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--darker);
 }
 
-#portrait{
+#portrait {
+  width: 3.75rem;
+  height: 3.75rem;
+  border-radius: 50%;
+  background-color: var(--medium);
+  > * {
     width: 3.75rem;
     height: 3.75rem;
-    border-radius: 50%;
-    background-color: var(--medium);
+  }
 }
 
-#rect{
-    height: 3.75rem;
-    width: 12rem;
-    background-color: var(--medium);
+#rect {
+  height: 3.75rem;
+  width: 12rem;
+  background-color: var(--medium);
 }
