@@ -3,11 +3,12 @@ import mkList from "./mkList";
 import mkTodoDisplay from "./mkTodoDisplay";
 import mkFilterList from "./mkFilterList";
 const updateList = () => {
-
   const content = document.getElementById("content");
   //clear out current items if any
-  while (content.firstElementChild) {
-    content.firstElementChild.remove();
+  if (content.firstElementChild) {
+    while (content.firstElementChild) {
+      content.firstElementChild.remove();
+    }
   }
 
   //filter if any
@@ -17,15 +18,15 @@ const updateList = () => {
     for (let id of app.filteredItems) {
       filteredItems.push(app.getItem(id));
     }
-  };
+  }
 
-  if (app.filter != null && app.filter != 'all') {
+  if (app.filter != null && app.filter != "all") {
     const filterListObj = app.mkList(filter);
     const filterList = mkFilterList(filterListObj);
     content.appendChild(filterList);
-    if(app.filterExpand){
-        const todos = mkTodoDisplay(filteredItems);
-        content.appendChild(todos);
+    if (app.filterExpand) {
+      const todos = mkTodoDisplay(filteredItems);
+      content.appendChild(todos);
     }
   }
 
@@ -37,7 +38,6 @@ const updateList = () => {
       const todos = mkTodoDisplay(listObj.children);
       content.appendChild(todos);
     }
-    
   }
 };
 
