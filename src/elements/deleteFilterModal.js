@@ -7,7 +7,7 @@ deleteFilter.classList.add("modal-window");
 
 const exitIcon = mkIcon(Exit);
 
-const filter = structuredClone(app.filter);
+const filter = structuredClone(app.filter) || "all";
 const capFilter = filter.charAt(0).toUpperCase() + filter.slice(1);
 
 // msg
@@ -61,13 +61,13 @@ cancelDelete.addEventListener("click", (e) => {
   }
 });
 
-deleteFilterTodo.addEventListener('click', e=>{
-    e.preventDefault();
-    app.removeFilterItems();
-    let opened = document.querySelectorAll(".modal-open");
-    for (let item of opened) {
-      item.classList.remove("modal-open");
-    }
-})
+deleteFilterTodo.addEventListener("click", (e) => {
+  e.preventDefault();
+  app.removeFilterItems();
+  let opened = document.querySelectorAll(".modal-open");
+  for (let item of opened) {
+    item.classList.remove("modal-open");
+  }
+});
 
 export default deleteFilter;

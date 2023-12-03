@@ -12,7 +12,7 @@ const updateList = () => {
   }
 
   //filter if any
-  const filter = app.filter;
+  const filter = app.filter || "all";
   const filteredItems = [];
   if (app.filteredItems != null) {
     for (let id of app.filteredItems) {
