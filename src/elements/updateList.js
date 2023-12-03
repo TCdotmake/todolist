@@ -5,7 +5,7 @@ import mkFilterList from "./mkFilterList";
 const updateList = () => {
   const content = document.getElementById("content");
   //clear out current items if any
-  if (content.firstElementChild) {
+  if (content && content.firstElementChild) {
     while (content.firstElementChild) {
       content.firstElementChild.remove();
     }

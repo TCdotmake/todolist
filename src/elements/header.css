@@ -23,5 +23,21 @@
 #rect {
   height: 3.75rem;
   width: 12rem;
+  border-radius: 15px;
   background-color: var(--medium);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  > h2 {
+    color: var(--darker);
+    font-size: 1.8rem;
+    font-weight: 200;
+    line-height: 90%;
+  }
+  > p {
+    color: var(--darker);
+    font-size: 1rem;
+    font-weight: 100;
+  }
 }
